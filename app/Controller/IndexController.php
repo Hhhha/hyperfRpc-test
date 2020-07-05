@@ -47,8 +47,7 @@ class IndexController extends AbstractController
      */
     public function breaker()
     {
-        $sleep = $this->calculatorServiceInterface->sleep(1, 1);
-        sleep(1);
+        $sleep = $this->calculatorServiceInterface->sleep($this->request->input('num1',1), $this->request->input('num2',1));
         return [
             'message' => 'Hello',
             'sleep' => $sleep
