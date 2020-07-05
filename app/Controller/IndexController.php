@@ -35,6 +35,11 @@ class IndexController extends AbstractController
         ];
     }
 
+    public function test()
+    {
+        return ['success' => 'success', 'time' => date('Y-m-d H:i:s')];
+    }
+
     /**
      * 熔断测试
      * @return array
